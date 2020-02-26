@@ -1,85 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/css/mdb.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
-<script src="js/main.js"></script>
-<title>King's Pizza</title>
-</head>
-<body id="Order">
-    <div class="container text-center">
-        <div class="container" style="margin-top: 15%;">
-            <div class="card">
-                <div class="card text-center">
-                    <div class="card-header">
-                      <ul class="nav nav-tabs card-header-tabs">
-                        <li class="nav-item">
-                          <a class="nav-link " href="index.html"><i class="fas fa-crown">Home</i></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link " href="menu.html"><i class="fas fa-pizza-slice">Menu</i></a>
-                        </li>
-                        <li class="nav-item ">
-                          <a class="nav-link active " href="order.html"><i class="fas fa-cart-plus">Order</i></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Welcome to King's Pizza</h5>
-                      <p class="card-text">A Kings Pizza pizza box might be one of the most recognisable icons of Africa. Whichever way you slice it,
-                          
-                        <form action="" class="form">
-                          <!-- pizza size -->
-                          <select id="cars" class="form-control">
-                            <option value="">--Choose pizza size--</option>
-                            <option value="">Small</option>
-                            <option value="">Medium</option>
-                            <option value="">Large</option>                        
-                          </select>
-                          <br>
-                          <!-- pizza toppings -->
-                          <select id="cars" class="form-control">
-                            <option value="">--Choose type of topping--</option>
-                            <option value="">Peperoni</option>
-                            <option value="">Mashroom</option>
-                            <option value="">Ovacado</option>
-                            <option value="">Black Olives</option>
-                          </select>
-                          <br>
-                            <!-- crust -->
-                            <select id="cars" class="form-control">
-                              <option value="">--Crust or no crust--</option>
-                              <option value="">No Crust</option>
-                              <option value="">Crust ($3)</option>                              
-                            </select>  
-                          <br>
-                          <!-- type of drink -->
-                          <select id="cars" class="form-control">
-                            <option value="">--Choose your drink--</option>
-                            <option value="">CocaCola</option>
-                            <option value="">Fanta</option>
-                            <option value="">Sprite</option>
-                            <option value="">Stoney</option>
-                          </select>
-                          <br>
 
-                          <a href="#" class="btn btn-primary" onclick="button()"><i class="fas fa-shopping-bag"></i> checkout</a>
-                        </form>    
-                        </p>
-                      
-                    </div>
-                  </div>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>King's Pizza</title>
+</head>
+
+<body id="Order">
+  <div class="container text-center">
+    <div class="container" style="margin-top: 15%;">
+      <div class="card">
+        <div class="card text-center">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link " href="index.html"><i class="fas fa-crown">Home</i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="menu.html"><i class="fas fa-pizza-slice">Menu</i></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link active " href="order.html"><i class="fas fa-cart-plus">Order</i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Welcome to King's Pizza</h5>
+            <p class="card-text">A Kings Pizza pizza box might be one of the most recognisable icons of Africa.
+              Whichever way you slice it,
+
+              <form action="" class="form">
+                <!-- pizza size -->
+                <select  class="form-control" id="size">
+                  <option value="0">--Choose pizza size--</option>
+                  <option value="30">Small</option>
+                  <option value="40">Medium</option>
+                  <option value="50">Large</option>
+                </select>
+                <br>
+                <!-- pizza toppings -->
+                <select  class="form-control" id="toppings">
+                  <option value="0">--Choose type of topping--</option>
+                  <option value="30">Peperoni</option>
+                  <option value="40">Mashroom</option>
+                  <option value="50">Ovacado</option>
+                  <option value="60">Black Olives</option>
+                </select>
+                <br>
+                <!-- crust -->
+                <select  class="form-control" id="crust">
+                  <option value="0">--Crust or no crust--</option>
+                  <option value="0">No Crust</option>
+                  <option value="30">Crust ($3)</option>
+                </select>
+                <br>
+                <!-- type of drink -->
+                <select  class="form-control" id="drinks">
+                  <option value="0">--Choose your drink--</option>
+                  <option value="30">CocaCola</option>
+                  <option value="40">Fanta</option>
+                  <option value="50">Sprite</option>
+                  <option value="60">Stoney</option>
+                </select>
+                <br>
+                <input class="form-control" type="text" name="pizza" id="quan" placeholder="0" max="" min="0">
+                <br>
+                <a href="#" class="btn btn-primary" onclick="getTotalAmount()"><i class="fas fa-shopping-bag"></i>
+                  checkout</a>
+              </form>
+            </p>
+
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
+
 </html>
