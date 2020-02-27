@@ -35,3 +35,10 @@ function output(){
     }
     
 }
+
+function button(){
+
+    document.getElementById('data').innerHTML= document.getElementById('output')
+    
+}
+
