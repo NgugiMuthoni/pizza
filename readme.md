@@ -4,4 +4,8 @@
 ### Gettng Started
 >>To get started you simply have to download a copy of the project from the repo.
 ### Prerequisites
->>No special Prerequisites are required to run this projects simply double click on the index file and it will open in your browser.
+>>No special Prerequisites are required to run this project.
+### Installing
+>>Simply double click on the index file and it will open in your browser.
+### Running the tests
+>>no tests are required
