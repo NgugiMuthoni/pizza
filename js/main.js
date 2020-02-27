@@ -21,7 +21,7 @@ function getDrink() {
 function getTotalAmount() {
     var totalAmount = (getSize() + getCrust() + getToppings() + getDrink()) * getQuantity();
     alert("You have Ordered" + " " + getQuantity("")  +  " pizza."  +  ""  +  " The Total Amount is kshs "  +  (totalAmount)  +  ""  +  " Thank you for your order welcome again.");
-    
+    return totalAmount;
 }
 
 function output(){
@@ -33,4 +33,5 @@ function output(){
     }else{
         alert("Hope to see you again")
     }
+    
 }

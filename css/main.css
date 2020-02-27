@@ -2,7 +2,7 @@
 
 
 body{
-    background-image: url('../images/pizzaday.jpg');
+    background-image: url('../images/woodpizza.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -21,4 +21,4 @@ body{
 .well-block .dish-meta { width: 100%; }
 .well-block .dish-price { font-size: 26px; color: #e03c23; font-weight: 500; font-family: 'Zilla Slab', serif; position: inherit; }
 .menu-title:hover {border-bottom: 3px solid #e03c23; margin-bottom: 36px; padding-bottom: 10px;}
-.menu-content:hover{border-bottom: 1px solid #e03c23; margin-bottom: 30px;}
+.menu-content:hover{border-bottom: 2px solid #e03c23; margin-bottom: 30px;}
