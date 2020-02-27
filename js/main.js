@@ -1,9 +1,4 @@
-function button(){
-    alert('this works')
-}
-
- 
-function getSizeValue() {
+function getSize() {
     var selectedValue = document.getElementById("size").value;
     return parseInt(selectedValue);
 }
@@ -16,7 +11,7 @@ function getToppings() {
     return parseInt(selectedToppings);
 }
 function getQuantity() {
-    var selectedQuantity = document.getElementById("quan").value;
+    var selectedQuantity = document.getElementById("quantity").value;
     return parseInt(selectedQuantity);
 }
 function getDrink() {
@@ -24,10 +19,18 @@ function getDrink() {
     return parseInt(selectedToppings);
 }
 function getTotalAmount() {
-    var totalAmount = (getSizeValue() + getCrust() + getToppings() + getDrink()) * getQuantity();
+    var totalAmount = (getSize() + getCrust() + getToppings() + getDrink()) * getQuantity();
     alert("You have Ordered" + " " + getQuantity("")  +  " pizza."  +  ""  +  " The Total Amount is kshs "  +  (totalAmount)  +  ""  +  " Thank you for your order welcome again.");
+    
+}
+
+function output(){
+    if(getTotalAmount()>0){
     prompt("enter your location")
-    alert("You delivery fee is 150/=")
+    alert("You delivery fee is 100/=")
     alert("You order will be delivered shortly")
     alert("Continue shoppping with us each and every time .")
+    }else{
+        alert("Hope to see you again")
+    }
 }
