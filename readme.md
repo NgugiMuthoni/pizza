@@ -17,3 +17,11 @@
 [Bootstrap-4](https://getbootstrap.com/): Most of the styling
 
 [javascript](https://en.wikipedia.org/wiki/JavaScript): used on the order form
+
+### BDD
+>user opens the site and finds a short story about King's Pizza on the landing page.
+>>> <img src="images/landing.png"> 
+>user can then navigate to the menu where they can see the prices of different sizes of pizza and how the prices change according to what accompanies the pizza(either a soda or toppings)  
+>>> <img src="images/menu.png">
+>user can then navigate to the order page where they may place their order
+>>> <img src="images/order.png">
