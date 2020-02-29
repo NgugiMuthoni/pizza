@@ -31,3 +31,6 @@
 >>>> <img src="images/locationprompt.png">
 >>>after this they get a prompt informing them of the price for their purchase:
 >>>> <img src="images/orderprompt.png">
+
+### Live link to project:
+[King's-Pizza](https://ngugimuthoni.github.io/pizza/)
