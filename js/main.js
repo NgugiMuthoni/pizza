@@ -26,7 +26,7 @@ function output(){
     if(ourAmount){
 
         var promptOptions = {
-            title: "Enter your name",
+            title: "Enter delivery location",
             message: "You order will be delivered shortly! You delivery fee will be 100/=. ",
             buttons: {
               confirm: {
@@ -60,20 +60,6 @@ function getTotalAmount() {
     return totalAmount;
 }
 
-function button(){
 
-    document.getElementById('data').innerHTML= document.getElementById('output')
-    
-}
 
-$(document).on("click", ".show-alert", function(e) {
-    bootbox.prompt("Hello world!", function() {
-        // console.log("Alert Callback");
-    });
-    bootbox.alert("Hello world!", function() {
-        // console.log("Alert Callback");
-    });
-    e.stopPropagation(); 
-            return false;
-});
 
