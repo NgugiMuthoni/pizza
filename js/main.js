@@ -1,29 +1,70 @@
 function getSize() {
     var selectedValue = document.getElementById("size").value;
-    return parseInt(selectedValue);
+    console.log(typeof(selectedValue));
+
+   
+    if(selectedValue){ 
+        return parseInt(selectedValue);
+        
+    } else {
+        return false
+    };
+    
 }
 function getCrust() {
     var selectedCrust = document.getElementById("crust").value;
-    return parseInt(selectedCrust);
+    
+    if(selectedCrust){
+        return parseInt(selectedCrust)
+    } else {
+        return false
+    }
+
+    
 }
 function getToppings() {
     var selectedToppings = document.getElementById("toppings").value;
-    return parseInt(selectedToppings);
+    
+    if(selectedToppings){
+        return parseInt(selectedToppings);
+    } else {
+        return false
+    }
 }
 function getQuantity() {
-    var selectedQuantity = document.getElementById("quantity").value;
-    return parseInt(selectedQuantity);
+    var selectedQuantity = document.getElementById("quan").value;
+    
+    if(selectedQuantity){
+        return parseInt(selectedQuantity);
+    } else {
+        return false
+    }
 }
 function getDrink() {
-    var selectedToppings = document.getElementById("drinks").value;
-    return parseInt(selectedToppings);
+    var selectedDrinks = document.getElementById("drinks").value;
+    
+    if(selectedDrinks){
+        return parseInt(selectedDrinks);
+    } else {
+        return false
+    }
+}
+function getAmount() {
+    var selectedAmount = document.getElementById("quantityOfDrinks").value;
+    
+    if(selectedAmount){
+        return parseInt(selectedAmount);
+    } else {
+        return false
+    }
 }
 
 
 function output(){
+    // debugger
     let ourAmount = getTotalAmount()
     console.log(ourAmount);
-    if(ourAmount){
+    if(ourAmount && getSize() > 0 && getQuantity() >= 5){
 
         var promptOptions = {
             title: "Enter delivery location",
@@ -43,23 +84,38 @@ function output(){
         };
         bootbox.prompt(promptOptions)
         
-    } else {
+     } else if( getSize() < 1) {
+         bootbox.alert("Please enter the size of Pizza!!")
+     }
+     else if( getQuantity() < 1) {
+        bootbox.alert("Please enter the Quantity of Pizza!!")
+    }
+    else if( getQuantity() < 5) {
+        bootbox.alert("Sorry we currently dont deliver less than 5 pizza.Please  pick up your order at any branch near you.Thank you for your Order!!")
+    }
+    else if( getDrink() > 1 && getAmount() < 1) {
+        bootbox.alert("Please enter the Quantity of Drinks!!")
+    }
+      else if(getTotalAmount() == 0) {
         bootbox.alert("Hope to see you again")
     }
-    
 }
 
 
 function getTotalAmount() {
-    let totalAmount = (getSize() + getCrust() + getToppings() + getDrink()) * getQuantity();
-    if(totalAmount){
-        bootbox.alert("You have Ordered" + " " + getQuantity("")  +  " pizza."  +  ""  +  " The Total Amount is kshs "  +  (totalAmount)  +  ""  +  " Thank you for your order welcome again.");
-    } else {
+    let totalAmount = ((getSize() + getCrust() + getToppings() ) * getQuantity() ) + (getDrink() * getAmount());
+    if( totalAmount && getSize() > 0  ){
+        bootbox.alert("You Ordered" + " " + getQuantity("")  +  " pizza."  +  ""  +  " The price is kshs "  +  (totalAmount)  +  ""  +  " Thank you for your order welcome again.");
+    }else {
         return false
     }
     return totalAmount;
 }
 
 
-
-
+var btn = document.getElementById("myBtn");
+     
+    // Assigning event listeners to the button
+    btn.addEventListener("click", output);
+   
+    

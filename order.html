@@ -39,54 +39,69 @@
           <div class="card-body">
             <h5 class="card-title">Welcome to King's Pizza</h5>
             <p class="card-text">A Kings Pizza pizza box might be one of the most recognisable icons of Africa.
-              Whichever way you slice it,
+              Whichever way you slice it. <br>Buy more than 5 pizza and have it delivered to you.
 
               <form action="" class="form">
                 <!-- pizza size -->
-                <select  class="form-control" id="size">
+                <select  class="form-control" id="size" required>
                   <option value="0">--Choose pizza size--</option>
-                  <option value="800">Small</option>
-                  <option value="1200">Medium</option>
-                  <option value="1500">Large</option>
+                  <option value="800"><span id="sm">Small</span>(800)</option>
+                  <option value="1200">Medium(1200)</option>
+                  <option value="1500">Large(1500)</option>
                 </select>
                 <br>
                 <!-- pizza toppings -->
                 <select  class="form-control" id="toppings">
                   <option value="0">--Choose type of topping--</option>
-                  <option value="350">Peperoni</option>
-                  <option value="250">Mashroom</option>
-                  <option value="100">Ovacado</option>
-                  <option value="300">Black Olives</option>
+                  <option value="350">Peperoni(350)</option>
+                  <option value="250">Mashroom(250)</option>
+                  <option value="100">Ovacado(100)</option>
+                  <option value="300">Black Olives(300)</option>
                 </select>
                 <br>
                 <!-- crust -->
                 <select  class="form-control" id="crust">
                   <option value="0">--Crust or no crust--</option>
                   <option value="0">No Crust</option>
-                  <option value="300">Crust ($3)</option>
+                  <option value="300">Crust (300)</option>
                 </select>
                 <br>
                 <!-- type of drink -->
                 <select  class="form-control" id="drinks">
                   <option value="0">--Choose your drink--</option>
-                  <option value="100">CocaCola</option>
-                  <option value="100">Fanta</option>
-                  <option value="100">Sprite</option>
-                  <option value="100">Stoney</option>
+                  <option value="100">CocaCola(100)</option>
+                  <option value="100">Fanta(100)</option>
+                  <option value="100">Sprite(100)</option>
+                  <option value="100">Stoney(100)</option>
                 </select>
                 <br>
-                <input class="form-control" type="number" name="pizza" id="quantity" placeholder="0" max="" min="0">
+               
+               <div class="row">
+                <div class="col">
+                  <input class="form-control" type="number" name="pizza" id="quan" placeholder="--Quantity of pizza--"  min="1">
+                </div>
+                <div class="col">
+                  <input class="form-control" type="number" name="drink" id="quantityOfDrinks" placeholder="--Quantity of drinks--"  min="1">
+                </div>
+              </div>
                 <br>
-                <a href="#" class="btn btn-primary" onclick="output()"><i class="fas fa-shopping-bag"></i>
+                <a href="#" class="btn btn-primary" id="myBtn"><i class="fas fa-shopping-bag"></i>
                   checkout</a>
+                  <div class="toast-body alert alert-success" role="alert">
+
+                    <p class="text-success"> Hello <span id="outputName"></span> we have received your message. Thank you
+                        for reaching out to us.</p>
+                </div>
               </form>
             </p>
 
           </div>
         </div>
       </div>
+      
     </div>
   </div>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
